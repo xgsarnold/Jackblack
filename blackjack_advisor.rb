@@ -143,11 +143,19 @@ card_1 = card_1?
 card_2 = card_2?
 dealer_card = dealer_card?
 
+if card_1 == "a"
+  card_1 = 11
+elsif card_2 == "a"
+  card_2 = 11
+elsif dealer_card == "a"
+  dealer_card = 11
+end
+
 if card_1 == card_2
   puts "You should #{pair[card_1.to_i][dealer_card.to_i]}"
-elsif card_1 != "a" && card_2 != "a"
+elsif card_1 != 11 && card_2 != 11
   puts "You should #{hard[(card_1.to_i + card_2.to_i)][dealer_card.to_i]}"
-elsif card_1 == "a" || card_2 == "a"
+elsif card_1 == 11 || card_2 == 11
   puts "You should #{soft[(card_1.to_i + card_2.to_i)][dealer_card.to_i]}"
 end
 
