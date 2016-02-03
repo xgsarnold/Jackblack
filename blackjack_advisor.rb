@@ -1,23 +1,28 @@
 
-def player_hand
-  puts "How many points do you have in your hand?"
+def card_1
+  puts "What's your first card?"
   gets.chomp
 end
 
-def dealer_hand
+def card_2
+  puts "What's your second card?"
+  gets.chomp
+end
+
+def dealer_card
   puts "How many points does the dealer have faceup?"
   gets.chomp
 end
 
-def ace
-  puts "Do you have an ace?"
-  gets.chomp
-end
-
-def pairs
-  puts "Do you have pairs?"
-  gets.chomp
-end
+#def ace
+#  puts "Do you have an ace?"
+#  gets.chomp
+#end
+#
+#def pairs
+#  puts "Do you have pairs?"
+#  gets.chomp
+#end
 
 hard = Hash.new()
 hard[5] = Hash.new("Hit!")
@@ -65,7 +70,81 @@ hard[16][] = "Hit!"
 hard[16][] = "Hit!"
 hard[16][] = "Hit!"
 
-
 soft = Hash.new()
+soft[13] = Hash.new("Hit!")
+soft[13][4] = "Double Down!"
+soft[13][5] = "Double Down!"
+soft[13][6] = "Double Down!"
+soft[14] = Hash.new("Hit!")
+soft[14][4] = "Double Down!"
+soft[14][5] = "Double Down!"
+soft[14][6] = "Double Down!"
+soft[15] = Hash.new("Hit!")
+soft[15][4] = "Double Down!"
+soft[15][5] = "Double Down!"
+soft[15][6] = "Double Down!"
+soft[16] = Hash.new("Hit!")
+soft[16][4] = "Double Down!"
+soft[16][5] = "Double Down!"
+soft[16][6] = "Double Down!"
+soft[17] = Hash.new("Hit!")
+soft[17][2] = "Double Down!"
+soft[17][3] = "Double Down!"
+soft[17][4] = "Double Down!"
+soft[17][5] = "Double Down!"
+soft[17][6] = "Double Down!"
+soft[18] = Hash.new("Stay ...")
+soft[18][3] = "Double Down!"
+soft[18][4] = "Double Down!"
+soft[18][5] = "Double Down!"
+soft[18][6] = "Double Down!"
+soft[18][9] = "Hit!"
+soft[18][10] = "Hit!"
+soft[19] = Hash.new("Stay ...")
+soft[19][6] = "Double Down!"
+soft[20] = Hash.new("Stay ...")
+soft[21] = Hash.new("Stay ...")
 
-pair = {}
+pair = Hash.new()
+pair[2] = Hash.new("Split!")
+pair[2][8] = "Hit!"
+pair[2][9] = "Hit!"
+pair[2][10] = "Hit!"
+pair[2][a] = "Hit!"
+pair[3] = Hash.new()
+pair[3][] = "Hit!"
+pair[3][] = "Hit!"
+pair[3][] = "Hit!"
+pair[4] = Hash.new("Hit!")
+pair[4][4] = "Split!"
+pair[4][5] = "Split!"
+pair[4][6] = "Split!"
+pair[5] = Hash.new("Double Down!")
+pair[5][10] = "Hit!"
+pair[5][a] = "Hit!"
+pair[6] = Hash.new("Split!")
+pair[6][8] = "Hit!"
+pair[6][9] = "Hit!"
+pair[6][10] = "Hit!"
+pair[6][a] = "Hit!"
+pair[7] = Hash.new("Split!")
+pair[7][9] = "Hit!"
+pair[7][10] = "Stand ..."
+pair[7][a] = "Hit!"
+pair[8] = Hash.new("Split!")
+pair[9] = Hash.new("Split!")
+pair[9][7] = "Stand ..."
+pair[9][9] = "Stand ..."
+pair[9][10] = "Stand ..."
+pair[10] = Hash.new("Stand ...")
+pair[a] = Hash.new("Split!")
+
+
+
+
+if card_1 == card_2
+
+  puts pair[2]
+end
+
+if card_1 == "a" || card_2 == "a"
