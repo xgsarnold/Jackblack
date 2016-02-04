@@ -1,16 +1,16 @@
 
 def card_1?
-  puts "What's your first card?"
+  puts "What's your first card? For face cards and aces, please just enter the first letter."
   gets.chomp
 end
 
 def card_2?
-  puts "What's your second card?"
+  puts "What's your second card? For face cards and aces, please just enter the first letter"
   gets.chomp
 end
 
 def dealer_card?
-  puts "How many points does the dealer have faceup?"
+  puts "What card does the dealer have? For face cards and aces, please just enter the first letter"
   gets.chomp
 end
 
